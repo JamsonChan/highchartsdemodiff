@@ -9,11 +9,13 @@ Highcharts.chart('container', {
         }
     },
     title: {
-        text: 'External trade in goods by country, Norway 2021'
+        text: 'External trade in goods by country, Norway 2021',
+        align: 'left'
     },
     subtitle: {
         text: 'Source: ' +
-            '<a '="" 'target="_blank" +="" href="https://www.ssb.no/en/statbank/table/08804/">SSB</a>'
+            '<a '="" 'target="_blank" +="" href="https://www.ssb.no/en/statbank/table/08804/">SSB</a>',
+        align: 'left'
     },
     plotOptions: {
         column: {

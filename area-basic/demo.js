@@ -14,11 +14,6 @@ Highcharts.chart('container', {
     },
     xAxis: {
         allowDecimals: false,
-        labels: {
-            formatter: function () {
-                return this.value; // clean, unformatted number for year
-            }
-        },
         accessibility: {
             rangeDescription: 'Range: 1940 to 2017.'
         }
@@ -26,11 +21,6 @@ Highcharts.chart('container', {
     yAxis: {
         title: {
             text: 'Nuclear weapon states'
-        },
-        labels: {
-            formatter: function () {
-                return this.value / 1000 + 'k';
-            }
         }
     },
     tooltip: {

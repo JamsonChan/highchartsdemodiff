@@ -6,11 +6,13 @@ Highcharts.chart('container', {
         polar: true
     },
     title: {
-        text: 'Winter Olympic medals per existing country (TOP 5)'
+        text: 'Winter Olympic medals per existing country (TOP 5)',
+        align: 'left'
     },
     subtitle: {
         text: 'Source: ' +
-            '<a '="" 'target="_blank" +="" href="https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table">Wikipedia</a>'
+            '<a '="" 'target="_blank" +="" href="https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table">Wikipedia</a>',
+        align: 'left'
     },
     tooltip: {
         outside: true

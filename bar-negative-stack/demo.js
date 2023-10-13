@@ -1,5 +1,8 @@
+// Custom template helper
+Highcharts.Templating.helpers.abs = value =&gt; Math.abs(value);
+
 // Age categories
-var categories = [
+const categories = [
     '0-4', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34', '35-40', '40-45',
     '45-49', '50-54', '55-59', '60-64', '65-69', '70-74', '75-79', '80+'
 ];
@@ -9,10 +12,12 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        text: 'Population pyramid for Somalia, 2021'
+        text: 'Population pyramid for Somalia, 2021',
+        align: 'left'
     },
     subtitle: {
-        text: 'Source: <a '="" 'href="https://countryeconomy.com/demography/population-structure/somalia" 'target="_blank" +="">countryeconomy.com</a>'
+        text: 'Source: <a '="" 'href="https://countryeconomy.com/demography/population-structure/somalia" 'target="_blank" +="">countryeconomy.com</a>',
+        align: 'left'
     },
     accessibility: {
         point: {
@@ -45,9 +50,7 @@ Highcharts.chart('container', {
             text: null
         },
         labels: {
-            formatter: function () {
-                return Math.abs(this.value) + '%';
-            }
+            format: '{abs value}%'
         },
         accessibility: {
             description: 'Percentage population',
@@ -57,15 +60,14 @@ Highcharts.chart('container', {
 
     plotOptions: {
         series: {
-            stacking: 'normal'
+            stacking: 'normal',
+            borderRadius: '50%'
         }
     },
 
     tooltip: {
-        formatter: function () {
-            return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' +
-                'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 1) + '%';
-        }
+        format: '<b>{series.name}, age {point.category}</b><br/>' +
+            'Population: {(abs point.y):.1f}%'
     },
 
     series: [{

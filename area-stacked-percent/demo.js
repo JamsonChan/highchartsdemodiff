@@ -4,11 +4,13 @@ Highcharts.chart('container', {
     },
     title: {
         useHTML: true,
-        text: 'Countries/regions with highest Gt CO<sub>2</sub>-emissions'
+        text: 'Countries/regions with highest Gt CO<sub>2</sub>-emissions',
+        align: 'left'
     },
     subtitle: {
         text: 'Source: ' +
-            '<a '="" 'target="_blank" +="" href="https://energiogklima.no/klimavakten/land-med-hoyest-utslipp/">Energi og Klima</a>'
+            '<a '="" 'target="_blank" +="" href="https://energiogklima.no/klimavakten/land-med-hoyest-utslipp/">Energi og Klima</a>',
+        align: 'left'
     },
     accessibility: {
         point: {

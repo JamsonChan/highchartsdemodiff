@@ -70,12 +70,14 @@ var ranges = [
 Highcharts.chart('container', {
 
     title: {
-        text: 'July temperatures in Nesbyen, 2022'
+        text: 'July temperatures in Nesbyen, 2022',
+        align: 'left'
     },
 
     subtitle: {
         text: 'Source: ' +
-            '<a '="" 'target="_blank" +="" href="https://www.yr.no/nb/historikk/graf/1-113585/Norge/Viken/Nesbyen/Nesbyen?q=2022-07">YR</a>'
+            '<a '="" 'target="_blank" +="" href="https://www.yr.no/nb/historikk/graf/1-113585/Norge/Viken/Nesbyen/Nesbyen?q=2022-07">YR</a>',
+        align: 'left'
     },
 
     xAxis: {

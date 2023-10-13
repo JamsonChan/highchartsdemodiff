@@ -189,10 +189,12 @@ Highcharts.chart('container', {
         type: 'pie'
     },
     title: {
-        text: 'Browser market share, January, 2022'
+        text: 'Browser market share, January, 2022',
+        align: 'left'
     },
     subtitle: {
-        text: 'Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+        text: 'Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>',
+        align: 'left'
     },
     plotOptions: {
         pie: {
@@ -208,9 +210,6 @@ Highcharts.chart('container', {
         data: browserData,
         size: '60%',
         dataLabels: {
-            formatter: function () {
-                return this.y &gt; 5 ? this.point.name : null;
-            },
             color: '#ffffff',
             distance: -30
         }
@@ -220,10 +219,14 @@ Highcharts.chart('container', {
         size: '80%',
         innerSize: '60%',
         dataLabels: {
-            formatter: function () {
-                // display only if larger than 1
-                return this.y &gt; 1 ? '<b>' + this.point.name + ':</b> ' +
-                    this.y + '%' : null;
+            format: '<b>{point.name}:</b> <span style="opacity: 0.5">{y}%</span>',
+            filter: {
+                property: 'y',
+                operator: '&gt;',
+                value: 1
+            },
+            style: {
+                fontWeight: 'normal'
             }
         },
         id: 'versions'

@@ -27,12 +27,14 @@ const data = [
 Highcharts.chart('container', {
 
     title: {
-        text: 'Observed wind in Vik, 30. July 2022'
+        text: 'Observed wind in Vik, 30. July 2022',
+        align: 'left'
     },
 
     subtitle: {
         text: 'Source: ' +
-            '<a '="" 'target="_blank" +="" href="https://www.yr.no/nb/historikk/graf/1-137598/Norge/Vestland/Vik/Vik%C3%B8yri?q=2022-07-30">YR</a>'
+            '<a '="" 'target="_blank" +="" href="https://www.yr.no/nb/historikk/graf/1-137598/Norge/Vestland/Vik/Vik%C3%B8yri?q=2022-07-30">YR</a>',
+        align: 'left'
     },
 
     xAxis: {

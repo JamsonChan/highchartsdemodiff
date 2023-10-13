@@ -22,9 +22,7 @@ Highcharts.chart('container', {
             text: 'Temperature'
         },
         labels: {
-            formatter: function () {
-                return this.value + '°';
-            }
+            format: '{value}°'
         }
     },
     tooltip: {
